@@ -3,7 +3,7 @@ def main():
 
 #I dont know how this works so im guessing
   def Hydrogen():
-    Print("Element name: Hydrogen")
+    print("Element name: Hydrogen")
     print("Element symbol: H")
     print("atomic mass (amu): 1.008u")
     print("Series: Reactive Nonmetals")
