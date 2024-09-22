@@ -13,7 +13,7 @@ def main():
     print("Electronegativity: 2.20")
 
 def Helium():
-  print("Element name: Helium")
+    print("Element name: Helium")
     print("Element symbol: He")
     print("Atomic Number: 2")
     print("atomic mass (amu): 4.0026u")
