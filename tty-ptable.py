@@ -2,7 +2,7 @@ def main():
   print(
 
 #I dont know how this works so im guessing
-  def Hydrogen():
+def Hydrogen():
     print("Element name: Hydrogen")
     print("Element symbol: H")
     print("Atomic Number: 1")
