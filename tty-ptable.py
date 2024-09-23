@@ -48,7 +48,6 @@ def main():
 #                                  +++                          +++                                  
 #                                       ++++              ++++      
 #                                           ++++++++++++++
-    
 def Hydrogen():
     print("Element name: Hydrogen")
     print("Element symbol: H")
