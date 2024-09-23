@@ -1,5 +1,6 @@
-def main():
-  print(
+import argparse os
+
+ASCII_ART_DIR = os.path.join(os.path.dirname(__file__), 'ascii_art')
 
 elements = {
   'H' = {
@@ -37,24 +38,59 @@ elements = {
     
   }
 }
-def Hydrogen():
-    print("Element name: Hydrogen")
-    print("Element symbol: H")
-    print("Atomic Number: 1")
-    print("atomic mass (amu): 1.008u")
-    print("Series: Reactive Nonmetals")
-    print("Common isotopes: Hydrogen-1 (99.972%), Hydrogen-2 (0.001%)")
-    print("Radioactive isotopes: Hydrogen-3 (trace) (β− decay), Hydrogen-4, Hydrogen-5, Hydrogen-6, Hydrogen-7 (neutron emmission)")
-    print("Electronegativity: 2.20")
-    print("Electron configuration: 1s1")
 
-def Helium():
-    print("Element name: Helium")
-    print("Element symbol: He")
-    print("Atomic Number: 2")
-    print("atomic mass (amu): 4.0026u")
-    print("Series: Noble Gases")
-    print("Common isotopes: Helium-3 (0.0002%), Helium-4 (99.9998%)")
-    print("Radioactive isotopes: Helium-2 (proton emmission), Helium-5, Helium-7, Helium-9, Helium-10 (neutron emmission), Helium-6, Helium-8 (β− decay)")
-    print("Electronegativity: N/A")
-    print("Electron configuration: 1s2")
+def load_ascii_art(symbol):
+  art_file = os.path.join(ASCII_ART_DIR, f"{symbol}.txt")
+  try:
+    with open(art_file, 'r') as file:
+      return file.readlines()
+  except FileNotFoundError:
+    return ["[ASCII art not available]\n"]
+
+def show_element_info(symbol):
+  element = elements.get(symbol)
+  if element:
+    ascii_art = load_ascii_art(symbol)
+    element_info = [
+      f"Element name: {element['name']}",
+      f"Element symbol: {symbol}",
+      f"Atomic Number: {element['atomic_number']}",
+      f"Atomic mass: {element['atomic_mass']}",
+      f"Series: {element['series']}",
+      f"Common isotopes: {element['common_isotopes']}",
+      f"Radioactive isotopes: {element['radioactive_isotopes']}",
+      f"Electronegativity: {element['electronegativity']}",
+      f"Electron configuration: {element['electron_configuration']}",
+    ]
+    
+    max_lines = max(len(ascii_art), len(element_info))
+
+    for i in range(max_lines):
+      art_line = ascii_art[i].rstrip() if i < len(ascii_art) else ''
+      info_line = element_info[i] if i < len(element_info) else ''
+      print(f"{art_line:<40} {info_line}")
+  else:
+    print(f"Error: Element with symbol '{symbol}' not found")
+
+def show_ascii_periodic_table():
+  periodic_table_file = os.path.join(ASCII_ART_DIR, 'periodic_table.txt')
+  try:
+    with open(periodic_table_file, 'r') as file:
+      print(file.read())
+
+except FileNotFoundError:
+  print("[Periodic Table not available]")
+
+def main():
+  parser = argparse.ArgumentParser(description="A Periodic table for the Linux terminal.")
+  for symbol, element in elements.items():
+    long_flag = f"--{element['name']}"
+    short_flag = f"-{symbol}"
+
+  args = parser.parse_args()
+
+  for symbol, element in elements.items():
+    if getattr(args, element['name']) or getattr(args, symbol):
+      show_element_info(symbol)
+      return
+  show_ascii_periodic_table()
