@@ -63,6 +63,13 @@ elements = {
     'electronegativity': '2.55',
     'electron_configuration': '1s2 2s2 2p2'
   },
+  'N': {
+    'name': 'Nitrogen',
+    'atomic_number': 7,
+    'atomic_mass': '14.007 u',
+    'series': 'Reactive nonmetals',
+    'common_isotopes': 'Nitrogen-14 (99.634%), Nitrogen-15 (0.366%)',
+    'radioactive_isotopes': 'Nitrogen-10, Nitrogen-11 (proton emission), Nitrogen-12, Nitrogen-13 (β+ emission) Nitrogen-16, Nitrogen-18, Nitrogen-22, Nitrogen-25 (β− decay), Nitrogen-24 (neutron emission), Nitrogen-17, Nitrogen-19, Nitrogen-20, Nitrogen-21, Nitrogen-23 (',
 }
 
 def load_ascii_art(symbol):
