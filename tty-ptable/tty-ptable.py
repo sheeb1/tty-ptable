@@ -3,7 +3,7 @@ import argparse os
 ASCII_ART_DIR = os.path.join(os.path.dirname(__file__), 'ascii_art')
 
 elements = {
-  'H' = {
+  'H': {
     'name': 'Hydrogen',
     'atomic_number': 1,
     'atomic_mass': '1.008 u',
@@ -12,8 +12,8 @@ elements = {
     'radioactive_isotopes': 'Hydrogen-3 (trace) (β− decay), Hydrogen-4, Hydrogen-5, Hydrogen-6, Hydrogen-7 (neutron emmission)',
     'electronegativity': '2.20',
     'electron_configuration': '1s1'
-  }
-  'He' = {
+  },
+  'He': {
     'name': 'Helium',
     'atomic_number': 2,
     'atomic_mass': '4.0026 u',
@@ -22,8 +22,8 @@ elements = {
     'radioactive_isotopes': 'Helium-2 (proton emmission), Helium-5, Helium-7, Helium-9, Helium-10 (neutron emmission), Helium-6, Helium-8 (β− decay)',
     'electronegativity': 'N/A',
     'electron_configuration': '1s2'
-  }
-  'Li' = {
+  },
+  'Li': {
     'name': 'Lithium',
     'atomic_number': 3,
     'atomic_mass': '6.94 u',
@@ -32,8 +32,8 @@ elements = {
     'radioactive_isotopes': 'Lithium-3, Lithium-4, Lithium-5 (proton emmission) Lithium-8, Lithium-9, Lithium-11 (β− decay), Lithium-10, Lithium-12 (neutron emmission)',
     'electronegativity': '0.98',
     'electron_configuration': '1s2 2s1'
-  }
-  'Be' = {
+  },
+  'Be': {
     
     
   }
