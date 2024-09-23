@@ -34,9 +34,35 @@ elements = {
     'electron_configuration': '1s2 2s1'
   },
   'Be': {
-    
-    
-  }
+    'name': 'Beryllium',
+    'atomic_number': 4,
+    'atomic_mass': '9.0122 u',
+    'series': 'Alkaline earth metals',
+    'common_isotopes': 'Beryllium-9 (100%)',
+    'radioactive_isotopes': 'Beryllium-5, Beryllium-6 (proton emission), Beryllium-7 (electron capture), Beryllium-8 (α decay), Beryllium-10, Beryllium-11, Beryllium-12, Beryllium-14 (β− decay), Beryllium-13, Beryllium-15, Beryllium-16 (neutron emission)',
+    'electronegativity': '1.57',
+    'electron_configuration': '1s2 2s2'
+  },
+  'B': {
+    'name': 'Boron',
+    'atomic_number': 5,
+    'atomic_mass': '10.81 u',
+    'series': 'Mettaloids',
+    'common_isotopes': 'Boron-10 (19.8%), Boron-11 (80.2%)',
+    'radioactive_isotopes': 'Boron-6, Boron-7, Boron-9 (proton emission), Boron-8 (β+ emission), Boron-12, Boron-13, Boron-14, Boron-15, Boron-17, Boron-19 (β− decay), Boron-16, Boron-18 (neutron emission)',
+    'electronegativity': '2.04',
+    'electron_configuration': '1s2 2s2 2p1'
+  },
+  'C': {
+    'name': 'Carbon',
+    'atomic_number': 6,
+    'atomic_mass': '12.011 u',
+    'series': 'Reactive nonmetals',
+    'common_isotopes': 'Carbon-12 (98.89%), Carbon-13 (1.11%)',
+    'radioactive_isotopes': 'Carbon-8 (proton emission), Carbon-9, Carbon-10, Carbon-11 (β+ emission), Carbon-14, Carbon-15, Carbon-16, Carbon-17, Carbon-18 (β− decay) Carbon-21 (neutron emission) Carbon-19, Carbon-20, Carbon-22 (variable, β−, β−n, β−2n)',
+    'electronegativity': '2.55',
+    'electron_configuration': '1s2 2s2 2p2'
+  },
 }
 
 def load_ascii_art(symbol):
