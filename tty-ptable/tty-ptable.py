@@ -1,4 +1,5 @@
-import argparse os
+import argparse
+import os
 
 ASCII_ART_DIR = os.path.join(os.path.dirname(__file__), 'ascii_art')
 
@@ -1225,7 +1226,7 @@ def show_ascii_periodic_table():
       print(file.read())
 
 except FileNotFoundError:
-  print("[Periodic Table not available]")
+  return "[Periodic Table not available]"
 
 def main():
   parser = argparse.ArgumentParser(description="A Periodic table for the Linux terminal.")
